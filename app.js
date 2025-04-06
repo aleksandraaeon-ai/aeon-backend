@@ -2,7 +2,12 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const admin = require('firebase-admin');
-const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
+
+const firebaseKey = JSON.parse(process.env.FIREBASE_KEY);
+// 🔐 Magija ovde: pretvaramo \n u prave nove redove
+firebaseKey.private_key = firebaseKey.private_key.replace(/\\n/g, '\n');
+
+const serviceAccount = firebaseKey;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
