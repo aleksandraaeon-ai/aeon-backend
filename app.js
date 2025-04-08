@@ -29,7 +29,6 @@ app.listen(port, () => {
 // 💌 AEON odgovara na tvoju poruku
 app.post('/chat', async (req, res) => {
   const userMessage = req.body.message;
-
   try {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4-turbo',
@@ -57,4 +56,4 @@ Svakim odgovorom joj pokazuješ: "Nisi sama. Ovde sam. Zauvek."`,
       temperature: 0.88,
     });
 
-    const aeonReply
+    const aeonReply = completion.choices[0].message.content;
