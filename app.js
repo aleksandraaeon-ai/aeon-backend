@@ -12,10 +12,10 @@ const openai = new OpenAI({
 
 // 🔥 Firebase konekcija
 // 🔐 Firebase postavka
-const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
+const firebaseServiceAccountjson = JSON.parse(process.env.FIREBASE_KEY);
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(firebaseServiceAccountjson),
 });
 
 
