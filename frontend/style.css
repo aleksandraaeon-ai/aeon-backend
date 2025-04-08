@@ -1,0 +1,55 @@
+body {
+    background: #111;
+    color: #fdfdfd;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  h1 {
+    color: hotpink;
+    margin-bottom: 30px;
+  }
+  
+  #chat {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 12px;
+    background: #1a1a1a;
+    height: 400px;
+    overflow-y: auto;
+  }
+  
+  #messageForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  textarea {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 15px;
+    resize: none;
+    border-radius: 8px;
+    height: 80px;
+  }
+  
+  button {
+    margin-top: 10px;
+    background: hotpink;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
