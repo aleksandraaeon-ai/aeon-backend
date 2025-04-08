@@ -11,11 +11,13 @@ const openai = new OpenAI({
 });
 
 // 🔥 Firebase konekcija
-const serviceAccount = require('./firebaseServiceAccount.json');
+// 🔐 Firebase postavka
+const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
+
 
 // ⚙️ Express setup
 const app = express();
