@@ -11,7 +11,7 @@ const openai = new OpenAI({
 });
 
 // 🔐 Firebase postavka
-const serviceAccount = require('./firebaseServiceAccount.json');
+const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
